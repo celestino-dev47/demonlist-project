@@ -1,0 +1,240 @@
+  
+  /*Estilo*/
+  
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+   body {
+    background-color: rgb(0,10,30);
+    margin: 0.1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  #intro {
+    margin: 2rem;
+    font-size: 1.5rem;
+    font-family: Georgia;
+    text-align: center;
+    color: #fff;
+    animation: showDown2 2s ease forwards;
+  }
+  
+  #searchBar {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+    opacity: 0;
+    margin: 2rem 1rem;
+    animation: showDown2 1s ease forwards;
+  }
+  
+  #searchBar button {
+    background-color: transparent;
+    border: none;
+    font-size: 160%;
+    cursor: pointer;
+  }
+  
+  #searchInput {
+    width: 100%;
+    height: 2rem;
+    outline: white;
+    background-color: #000066;
+    backdrop-filter: blur(6px);
+    box-shadow: 0 0 20px rgba(0, 180, 255, 0.3);
+    color: white;
+    border: 1px solid #fff;
+    border-radius: 10px ;
+    cursor: pointer;
+  }
+  
+  #searchInput::placeholder, #searchInput[type="text"] {
+    color: white;
+    font-size: 90%;
+    font-family: Monospace;
+    padding-left: 2em;
+    font-weight: 400;
+  }
+  
+  .container {
+    margin: 1rem 0.6rem 1rem 0.6rem;
+    padding: 0.8rem;
+    font-family: Arial;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+    border: 2px solid white;
+    font-family: Georgia;
+    border-radius: 14px;
+    border-top-width: 0.1rem;
+    border-top-color: black;
+    border-right-width: 0.1rem;
+    border-right-color: black;
+    background-color: #223355;
+    backdrop-filter: blur(6px);
+    box-shadow: 0 0 20px rgba(0, 180, 255, 0.4);
+    transition: transform 0.1s, background-color 0.1s, border-right-color 0.1s,
+    border-top-color 0.1s, border-color 0.1s;
+    animation: showDown 1s ease forwards;
+  }
+  
+  .container:active {
+    transform: translate(2px, 2px);
+    background-color: #8888;
+    border-top-color: white;
+    border-right-color: white;
+  }
+  
+  .container:hover {
+    border-color: blue;
+  }
+  
+  .inline {
+    display: flex;
+    font-family: Arial, Sans-Serif;
+    flex-direction: column;
+    gap: 2px;
+  }
+  
+  .inline span {
+    color: #11ff77;
+    font-weight: 400;
+  }
+  
+  .top {
+    text-align: right;
+    font-size: 80%;
+    color: #3399ff;
+  }
+  
+  .inline p {
+    color: white;
+    font-weight: 400;
+    font-size: 70%;
+  }
+  
+  img {
+    width: 15vh;
+    border: 1px solid transparent;
+    border-radius: 14px;
+  }
+  
+  .container a:link, a:visited{
+    text-decoration: none;
+    color: black;
+  }
+  
+  a:hover {
+    text-decoration: none;
+    color: red;
+  }
+  
+  a:active {
+    color: blue;
+  }
+  
+  .conf {
+    background-color: #11337777;
+    color: white;
+    margin: 0.6rem;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    gap: 20px;
+    border: 1px solid white;
+    border-radius: 15px;
+  }
+  
+.conf details[open] {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  font-size: 90%;
+  color: white;
+  font-family: Georgia;
+  background-color: #113377;
+  border: 1px dotted black;
+  padding: 5px;
+  border-radius: 15px;
+}
+
+  #footer {
+    margin: 2rem;
+    text-align: center;
+    opacity: 0.9;
+    color: #888888;
+    font-family: Sans-Serif;
+    font-weight: 500;
+  }
+  
+  /*Animações*/
+  
+  @keyframes showDown {
+    from {
+     opacity: 0;
+     transform: translateY(-20px);
+    }
+    to {
+    opacity: 1;
+    transform: translateY(0);
+    }
+   }
+   
+   @keyframes showDown2 {
+    0% {
+     opacity: 0;
+     transform: translateY(-40px);
+    }
+    50% {
+    opacity: 0.8;
+    transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0px);
+    }
+   }
+   
+   /* --- Ajustes exclusivos para Computador (Telas maiores que 1024px) --- */
+@media (min-width: 1024px) {
+  body {
+    padding: 0 15%; /* Adiciona margens laterais para o conteúdo não tocar as bordas */
+  }
+
+  #searchBar {
+    width: 50%; /* Diminui a barra de busca para não ficar gigante */
+    margin: 2rem auto; /* Centraliza a barra */
+  }
+
+  /* Organiza os containers em duas colunas se houver espaço */
+  main, section { 
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .container {
+    margin: 0; /* Remove a margem individual para o Grid controlar o espaçamento */
+    max-width: 600px;
+  }
+
+  img {
+    width: 120px; /* Tamanho fixo para imagens no desktop para manter consistência */
+    height: auto;
+  }
+}
