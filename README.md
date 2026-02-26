@@ -1,2 +1,0 @@
-# demonlist-project
-Demonlist
