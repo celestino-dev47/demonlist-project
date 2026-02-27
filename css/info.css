@@ -1,0 +1,166 @@
+/* RESET */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* BODY */
+
+body {
+  background: linear-gradient(180deg, #000814, #001d3d);
+  font-family: Georgia, serif;
+  color: white;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: fadeIn 1.2s ease;
+}
+
+/* HEADER */
+
+.header {
+  margin-top: 3rem;
+  text-align: center;
+  animation: slideDown 1s ease forwards;
+}
+
+.header h1 {
+  font-size: 2.2rem;
+  letter-spacing: 2px;
+  color: #ffffff;
+}
+
+.header p {
+  margin-top: 0.5rem;
+  color: #00b4ff;
+  font-size: 1rem;
+}
+
+/* CONTAINER PRINCIPAL */
+
+.container {
+  margin: 2rem;
+  padding: 2rem;
+  width: 90%;
+  max-width: 800px;
+  background: rgba(20, 40, 80, 0.7);
+  border: 2px solid #00b4ff;
+  border-radius: 20px;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 0 20px rgba(0, 180, 255, 0.3);
+  animation: slideUp 1.2s ease;
+}
+
+/* TÍTULOS INTERNOS */
+
+.container h2 {
+  text-align: center;
+  margin-bottom: 1.2rem;
+  color: #00d4ff;
+}
+
+/* PARÁGRAFOS */
+
+.container p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+  text-align: justify;
+  opacity: 0.9;
+}
+
+/* LISTAS */
+
+.container ul {
+  margin: 1rem 0;
+  padding-left: 1.5rem;
+}
+
+.container li {
+  margin-bottom: 0.5rem;
+  color: #90e0ef;
+}
+
+/* CONTATO LINKS */
+
+.contact-links a {
+  display: block;
+  margin: 0.5rem 0;
+  color: #00b4ff;
+  text-decoration: none;
+  transition: 0.2s ease;
+}
+
+.contact-links a:hover {
+  color: white;
+  transform: translateX(5px);
+}
+
+/* BOTÃO VOLTAR */
+
+.back {
+  margin: 2rem;
+}
+
+.back a {
+  text-decoration: none;
+}
+
+.back button {
+  background: transparent;
+  border: 2px solid #00b4ff;
+  color: #00b4ff;
+  padding: 0.6rem 1.5rem;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.back button:hover {
+  background: #00b4ff;
+  color: #001d3d;
+}
+
+.back button:active {
+  transform: translateY(2px);
+}
+
+/* FOOTER */
+
+footer {
+  margin-top: auto;
+  padding: 1rem;
+  opacity: 0.6;
+  font-size: 0.8rem;
+}
+
+/* ANIMAÇÕES */
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
