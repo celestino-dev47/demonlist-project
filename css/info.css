@@ -1,13 +1,11 @@
-/* RESET */
-
+/* --- RESET --- */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* BODY */
-
+/* --- BODY --- */
 body {
   background: linear-gradient(180deg, #000814, #001d3d);
   font-family: Georgia, serif;
@@ -16,11 +14,11 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  animation: fadeIn 1.2s ease;
+  animation: fadeIn 1.2s ease forwards;
+  background-attachment: fixed;
 }
 
-/* HEADER */
-
+/* --- HEADER --- */
 .header {
   margin-top: 3rem;
   text-align: center;
@@ -28,51 +26,61 @@ body {
 }
 
 .header h1 {
-  font-size: 2.2rem;
+  font-size: 2.4rem;
   letter-spacing: 2px;
-  color: #ffffff;
+  color: #00ffff;
+  text-shadow: 0 0 10px #00ffff, 0 0 20px #11ffaa;
 }
 
 .header p {
   margin-top: 0.5rem;
   color: #00b4ff;
-  font-size: 1rem;
+  font-size: 1.1rem;
+  text-shadow: 0 0 5px #00b4ff;
 }
 
-/* CONTAINER PRINCIPAL */
-
+/* --- CONTAINER PRINCIPAL --- */
 .container {
   margin: 2rem;
   padding: 2rem;
   width: 90%;
   max-width: 800px;
-  background: rgba(20, 40, 80, 0.7);
+  background: rgba(20, 40, 80, 0.85);
   border: 2px solid #00b4ff;
   border-radius: 20px;
-  backdrop-filter: blur(6px);
-  box-shadow: 0 0 20px rgba(0, 180, 255, 0.3);
-  animation: slideUp 1.2s ease;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 0 25px rgba(0, 180, 255, 0.4), 0 0 50px rgba(17,255,119,0.2);
+  animation: slideUp 1.2s ease forwards;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
 }
 
-/* TÍTULOS INTERNOS */
+.container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 35px #00f0ff, 0 0 70px #11ffaa;
+}
 
+/* --- TÍTULOS INTERNOS --- */
 .container h2 {
   text-align: center;
   margin-bottom: 1.2rem;
   color: #00d4ff;
+  text-shadow: 0 0 8px #00d4ff, 0 0 15px #11ffaa;
 }
 
-/* PARÁGRAFOS */
-
+/* --- PARÁGRAFOS --- */
 .container p {
   margin-bottom: 1rem;
   line-height: 1.6;
   text-align: justify;
   opacity: 0.9;
+  transition: color 0.2s ease;
 }
 
-/* LISTAS */
+.container p:hover {
+  color: #00ffff;
+}
 
+/* --- LISTAS --- */
 .container ul {
   margin: 1rem 0;
   padding-left: 1.5rem;
@@ -81,10 +89,15 @@ body {
 .container li {
   margin-bottom: 0.5rem;
   color: #90e0ef;
+  transition: color 0.2s ease;
 }
 
-/* CONTATO LINKS */
+.container li:hover {
+  color: #11ffaa;
+  transform: translateX(3px);
+}
 
+/* --- CONTATO LINKS --- */
 .contact-links a {
   display: block;
   margin: 0.5rem 0;
@@ -94,12 +107,12 @@ body {
 }
 
 .contact-links a:hover {
-  color: white;
+  color: #00ffff;
   transform: translateX(5px);
+  text-shadow: 0 0 5px #00ffff;
 }
 
-/* BOTÃO VOLTAR */
-
+/* --- BOTÃO VOLTAR --- */
 .back {
   margin: 2rem;
 }
@@ -115,29 +128,31 @@ body {
   padding: 0.6rem 1.5rem;
   border-radius: 30px;
   cursor: pointer;
-  transition: 0.2s ease;
+  transition: 0.3s ease, transform 0.2s ease;
 }
 
 .back button:hover {
   background: #00b4ff;
   color: #001d3d;
+  box-shadow: 0 0 15px #00b4ff, 0 0 25px #11ffaa;
+  transform: scale(1.05);
 }
 
 .back button:active {
-  transform: translateY(2px);
+  transform: translateY(2px) scale(0.98);
 }
 
-/* FOOTER */
-
+/* --- FOOTER --- */
 footer {
   margin-top: auto;
   padding: 1rem;
-  opacity: 0.6;
-  font-size: 0.8rem;
+  opacity: 0.8;
+  font-size: 0.85rem;
+  color: #88ccee;
+  text-align: center;
 }
 
-/* ANIMAÇÕES */
-
+/* --- ANIMAÇÕES --- */
 @keyframes slideDown {
   from {
     opacity: 0;
@@ -163,4 +178,24 @@ footer {
 @keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }
+}
+
+/* --- RESPONSIVO --- */
+@media (min-width: 1024px) {
+  .container {
+    max-width: 700px;
+  }
+
+  .header h1 {
+    font-size: 3rem;
+  }
+
+  .container h2 {
+    font-size: 1.8rem;
+  }
+
+  .back button {
+    padding: 0.8rem 2rem;
+    font-size: 1.1rem;
+  }
 }
