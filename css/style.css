@@ -10,7 +10,7 @@ html {
 }
 
 body {
-  background: linear-gradient(160deg, #000010, #001144);
+  background: linear-gradient(160deg, #000010, #001122);
   margin: 0.1rem;
   display: flex;
   flex-direction: column;
@@ -27,7 +27,7 @@ body {
   color: #00f0ff;
   letter-spacing: 1px;
   animation: showDown2 1.8s ease forwards;
-  text-shadow: 0 0 10px #00f0ff, 0 0 20px #11ffaa;
+  text-shadow: 0 0 6px #113344, 0 0 13px #11ddff;
 }
 
 /* --- Barra de busca --- */
@@ -72,8 +72,8 @@ body {
 }
 
 #searchInput:focus {
-  box-shadow: 0 0 30px #00f0ff, 0 0 50px #11ffaa;
-  border-color: #11ffaa;
+  box-shadow: 0 0 30px #00f0ff, 0 0 50px #11ddff;
+  border-color: #11ddff;
 }
 
 /* --- Containers de cards --- */
@@ -85,24 +85,24 @@ body {
   align-items: center;
   gap: 15px;
   border-radius: 16px;
-  border: 1px solid #11ffaa;
+  border: 1px solid #11ddff;
   background-color: rgba(34,51,85,0.85);
   backdrop-filter: blur(8px);
-  box-shadow: 0 0 25px rgba(0,180,255,0.5), 0 0 50px rgba(17,255,119,0.2);
+  box-shadow: 0 0 25px rgba(0,180,255,0.5), 0 0 50px rgba(17,119,155,0.2);
   transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
   animation: showDown 1s ease forwards;
 }
 
 .container:hover {
   transform: translateY(-4px);
-  box-shadow: 0 0 40px rgba(0,255,255,0.6), 0 0 60px rgba(17,255,119,0.3);
+  box-shadow: 0 0 40px rgba(0,255,255,0.6), 0 0 60px rgba(17,119,155,0.3);
   border-color: #00f0ff;
 }
 
 .container:active {
   transform: translate(2px, 2px);
   background-color: rgba(255,255,255,0.1);
-  border-color: #11ffaa;
+  border-color: #11ddff;
 }
 
 /* --- Conteúdo inline --- */
@@ -110,6 +110,10 @@ body {
   display: flex;
   flex-direction: column;
   gap: 3px;
+}
+
+.inline h4 {
+  color: #113344;
 }
 
 .inline span {
@@ -140,7 +144,7 @@ img {
 
 img:hover {
   transform: scale(1.05);
-  box-shadow: 0 0 20px #00f0ff, 0 0 30px #11ffaa;
+  box-shadow: 0 0 20px #00f0ff, 0 0 30px #11ddff;
 }
 
 /* --- Links --- */
@@ -151,8 +155,8 @@ img:hover {
 }
 
 a:hover {
-  color: #ff44aa;
-  text-shadow: 0 0 5px #ff44aa, 0 0 10px #ff44aa;
+  color: #44a;
+  text-shadow: 0 0 5px #11faee, 0 0 10px #118899;
 }
 
 a:active {
@@ -171,7 +175,7 @@ a:active {
   align-items: center;
   justify-content: space-around;
   gap: 20px;
-  border: 1px solid #11ffaa;
+  border: 1px solid #11ddff;
   border-radius: 16px;
 }
 
@@ -183,7 +187,7 @@ a:active {
   color: white;
   font-family: Georgia;
   background-color: #113377cc;
-  border: 1px dotted #11ffaa;
+  border: 1px dotted #11ddff;
   padding: 8px;
   border-radius: 16px;
 }
